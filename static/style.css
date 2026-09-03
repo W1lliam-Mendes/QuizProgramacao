@@ -184,7 +184,7 @@ button {
 }
 
 footer {
-    font-size: 1.5rem;
+    font-size: 15px;
     padding: 2%;
     background-color: #311838;
     text-align: left;
@@ -206,4 +206,8 @@ a {
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
+}
+
+.mainEnviar {
+    padding: 8rem;
 }

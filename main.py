@@ -64,8 +64,7 @@ def processarQuiz():
     if respostaP8 == "java" or respostaP8 == "Java":
         pontos = pontos + 1
 
-    return f"<h1>Quiz Enviado!</h1><p>Você fez {pontos} pontos.</p>"
-
+    return render_template('enviar.html', pontos=pontos)
 
 if __name__ == '__main__':
     app.run(debug=True)
