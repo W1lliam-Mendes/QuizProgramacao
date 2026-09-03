@@ -13,6 +13,19 @@ body {
     font-weight: 400;
 }
 
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px;
+    }
+}
+
 header {
     font-size: 1.5rem;
     padding: 2rem;
