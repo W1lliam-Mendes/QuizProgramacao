@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    background-color: #19081e;
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+}
+
+header {
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #311838;
+    text-align: center;
+}
+
+main { 
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h2 {
+    color: white;
+    font-size: 1.5rem;
+    padding-top:1.5rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #8a2be2;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="date"], textarea {
+    padding: 0.6rem;
+    width: 90%;
+    background-color: #311838;
+    border: 2px solid #4c197c;
+    color: white;
+    outline: none;
+    border-radius: 7px;
+}
+
+input[type="file"] {
+    padding: 0.4rem;
+    width: 10%;
+    background-color: #311838;
+    border: 3px solid #4c197c;
+    color: white;
+    outline: none;
+    border-radius: 7px;
+    color: transparent;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #311838;
+    color: white;
+    padding: 0.6rem;
+    border: none;
+    cursor: pointer;
+    color: #b49acc;
+}
+
+select {
+    outline: none;
+    border: 2px solid #4c197c;
+    background-color: #311838;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+input::placeholder {
+    color: #b49acc;
+}
+
+label {
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: fit-content; /* ← adicione isso */
+}
+
+img {
+    width: 20rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+table {
+    margin: 0.5rem;
+    text-align: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-collapse: collapse;
+    
+    thead {
+        text-align: center;
+        background-color: #311838;
+    }
+
+    td {
+        text-align: center;
+        padding: 0.2rem;
+        background-color: #3e1847;
+    }
+
+    tfoot td {
+        text-align: center;
+        background-color: #311838;
+    }
+}
+
+details {
+    width: 20rem;
+    border-radius: 0.7rem;
+    background-color: #3e1847;
+}
+
+summary {
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+ol {
+    width: 100%;
+    margin-left: 2rem;
+    color: rgb(187, 187, 187);
+}
+
+ol li {
+    padding: 0.2rem;
+}
+
+fieldset {
+    width: 50rem;
+    border: 2px solid #3e1847;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+}
+
+button {
+    padding: 0.6rem;
+    width: 30%;
+    background-color: #311838;
+    border: 2px solid #4c197c;
+    color: white;
+    outline: none;
+    border-radius: 7px;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+footer {
+    font-size: 1.5rem;
+    padding: 2%;
+    background-color: #311838;
+    text-align: left;
+}
+
+.pFooter {
+    font-size: 15px;
+    color: #5f3a81
+}
+
+a {
+    font-size: 15px;
+    color:#5f3a81
+}
+
+.verRespostas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}

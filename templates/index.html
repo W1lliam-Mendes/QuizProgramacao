@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Um quiz interativo">
+        <title>Quiz Interativo</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Quiz Interativo para programadores</h1>
+            <p>Teste seu conhecimento em programação e veja quantos pontos você conquista!</p>
+        </header>
+
+        <main>
+            <!-- Introdução sobre o quiz -->
+            <section>
+                <h2>Sobre esse Quiz</h2>
+                <p><strong>Este quiz</strong> foi criado para testar seu conhecimento em <em>programação</em> em <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Responda às perguntas e veja quantos pontos você conquista!</p>
+                <p>As perguntas abrangem diversos tópicos de programação, desde conceitos básicos até temas mais avançados. Prepare-se para um desafio divertido e educativo!</p>
+                <p>Boa sorte e divirta-se jogando!</p>
+            </section>
+
+            <!-- FORM PRINCIPAL — envolve todas as perguntas e o botão -->
+            <form action="/enviar" method="POST" enctype="multipart/form-data">
+
+                <!-- Pergunta 1 - Múltipla escolha -->
+                <section>
+                    <h2>Pergunta 1: <em>Qual linguagem de programação é usada para criar páginas web?</em></h2>
+
+                    <label>
+                        <input type="radio" value="Python" name="pergunta1">
+                        Python
+                    </label>
+                    <label>
+                        <input type="radio" value="JavaScript" name="pergunta1">
+                        JavaScript
+                    </label>
+                    <label>
+                        <input type="radio" value="C++" name="pergunta1">
+                        C++
+                    </label>
+                    <label>
+                        <input type="radio" value="HTML" name="pergunta1">
+                        HTML
+                    </label>
+                    <label>
+                        <input type="radio" value="CSS" name="pergunta1">
+                        CSS
+                    </label>
+                </section>
+
+                <!-- Pergunta 2 -->
+                <section>
+                    <h2>Pergunta 2: <em>Na URL https://www.google.com, o trecho "google.com" é o ____</em></h2>
+                    <input type="text" id="p2" name="pergunta2" placeholder="Digite a sua resposta...">
+                </section>
+
+                <!-- Pergunta 3 - Senha -->
+                <section>
+                    <h2>Pergunta 3: <em>Um exemplo de senha forte</em> é:</h2>
+                    <input type="password" id="p3" name="pergunta3" placeholder="Digite a sua resposta...">
+                </section>
+
+                <!-- Pergunta 4 -->
+                <section>
+                    <h2>Pergunta 4: <em>Em que ano o HTML lançou a sua primeira versão</em></h2>
+                    <input type="date" id="p4" name="pergunta4">
+                </section>
+
+                <!-- Pergunta 5 - Checkboxes -->
+                <section>
+                    <h2>Pergunta 5: <em>Qual dessas tecnologias são consideradas linguagens de programação?</em></h2>
+                    <label>
+                        <input type="checkbox" name="pergunta5" value="Python">
+                        Python
+                    </label>
+                    <label>
+                        <input type="checkbox" name="pergunta5" value="JavaScript">
+                        JavaScript
+                    </label>
+                    <label>
+                        <input type="checkbox" name="pergunta5" value="HTML">
+                        HTML
+                    </label>
+                    <label>
+                        <input type="checkbox" name="pergunta5" value="CSS">
+                        CSS
+                    </label>
+                </section>
+
+                <!-- Pergunta 6 - Upload -->
+                <section>
+                    <h2>Faça o upload de um arquivo contendo código HTML</h2>
+                    <input type="file" id="p6" name="pergunta6" accept=".html">
+                </section>
+
+                <!-- Pergunta 7 - Select -->
+                <section>
+                    <h2>Pergunta 7: <em>Qual é a função do atributo do input que define seu tipo:</em></h2>
+                    <select name="pergunta7" id="p7">
+                        <option value="none">None</option>
+                        <option value="id">id</option>
+                        <option value="type">type</option>
+                        <option value="name">name</option>
+                        <option value="placeholder">placeholder</option>
+                    </select>
+                </section>
+
+                <!-- Pergunta 8 - Imagem -->
+                <section>
+                    <h2>Pergunta 8: <em>Qual linguagem de programação é representada pelo logotipo abaixo?</em></h2>
+                    <figure>
+                        <img src="/static/JavaIcon.png" alt="Logotipo de uma linguagem de programação" width="200"><br>
+                    </figure>
+                    <input type="text" id="p8" name="pergunta8" placeholder="Digite a sua resposta...">
+                </section>
+
+                <!-- Tabela de pontuação -->
+                <section>
+                    <h2>Tabela de Pontuação</h2>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Pontos</th>
+                                <th>Nível</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0-2</td>
+                                <td>Iniciante</td>
+                            </tr>
+                            <tr>
+                                <td>3-4</td>
+                                <td>Intermediário</td>
+                            </tr>
+                            <tr>
+                                <td>5-6</td>
+                                <td>Avançado</td>
+                            </tr>
+                            <tr>
+                                <td>7-8</td>
+                                <td>Expert</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Boa sorte!</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+
+                <!-- Feedback -->
+                <section>
+                    <h2>Deixe seu feedback aqui</h2>
+                    <fieldset>
+                        <legend>Informações de contato</legend>
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome aqui">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email aqui">
+                        <label for="comments">Comentários</label><br>
+                        <textarea id="comments" name="comments" placeholder="Digite seus comentários aqui" rows="4" cols="50"></textarea><br>
+                    </fieldset>
+                    <br>
+                </section>
+
+                <!-- Botão de enviar -->
+                <section>
+                    <div style="display: flex; justify-content: center;">
+                        <button type="submit">Enviar Respostas!</button>
+                    </div>
+                </section>
+
+            </form>
+            <!-- FIM DO FORM PRINCIPAL -->
+
+        </main>
+
+        <!-- Lista de respostas -->
+        <section class="verRespostas">
+            <h2>Verifique as suas respostas</h2>
+            <details>
+                <summary>Clique para ver as respostas corretas</summary>
+                <ol>
+                    <li>HTML</li>
+                    <li>Domínio</li>
+                    <li>ABC123!kao7Adas#%</li>
+                    <li>1991</li>
+                    <li>Python, JavaScript</li>
+                    <li>O arquivo deve ter extensão .html</li>
+                    <li>type</li>
+                    <li>Java</li>
+                </ol>
+            </details>
+        </section>
+
+        <footer>
+            <p class="pFooter">&copy; Quiz de programadores. Todos os direitos reservados.</p>
+            <p class="pFooter">&gt; Desenvolvido por William Mendes de paula.</p>
+            <p class="pFooter">&gt; <a href="https://github.com/W1lliam-Mendes/" target="_blank">GitHub</a></p>
+            <p class="pFooter">&gt; <a href="https://linkedin.com/in/william-mendes-5889533ab/" target="_blank">LinkedIn</a></p>
+        </footer>
+    </body>
+</html>
