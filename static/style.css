@@ -53,6 +53,16 @@ h2 {
     padding-top:1.5rem;
 }
 
+input {
+    max-width: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    flex-direction: column;
+}
+
 input[type="radio"], input[type="checkbox"] {
     accent-color: #8a2be2;
     cursor: pointer;
@@ -89,13 +99,17 @@ input[type="file"]::file-selector-button {
 }
 
 select {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
     outline: none;
     border: 2px solid #4c197c;
     background-color: #311838;
     border-radius: 7px;
     color: white;
     cursor: pointer;
-    padding: 0.2rem;
+    padding: 1rem;
+    max-width: 500px;
 }
 
 input::placeholder {
@@ -103,13 +117,13 @@ input::placeholder {
 }
 
 label {
-    color: white;
     font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    width: fit-content; /* ← adicione isso */
+    width: fit-content;
+    margin-bottom: 0.5rem;
 }
 
 img {
@@ -174,10 +188,11 @@ ol li {
 }
 
 fieldset {
-    width: 50rem;
-    border: 2px solid #3e1847;
-    border-radius: 1rem;
+    width: 40rem;
+    border: 3px solid #3e1847;
+    border-radius: 2rem;
     padding: 1rem;
+    max-width: 80%;
 }
 
 legend {
@@ -197,6 +212,7 @@ button {
 }
 
 footer {
+    border-radius: 0.7rem;
     font-size: 15px;
     padding: 2%;
     background-color: #311838;
@@ -223,4 +239,17 @@ a {
 
 .mainEnviar {
     padding: 8rem;
+}
+
+.chooseFile {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #311838;
+    border: 2px solid #4c197c;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
 }
