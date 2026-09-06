@@ -6,8 +6,9 @@
 - Link com redes socias
 - Front-end em CSS
 - Back-end com Python e Flask
+- Banco de dados Integrado com SQLAlchemy e PostgreSQL
 
 ### Tecnologias usadas:
-[![My Skills](https://skillicons.dev/icons?i=html,css,python,flask&theme=dark)](https://skillicons.dev)<br><br>
+[![My Skills](https://skillicons.dev/icons?i=html,css,python,flask,postgres,git,github,vercel&theme=dark)](https://skillicons.dev)
 
-<p>O projeto está em andamento.</p>
+<p>Link do Site: <a href="https://quiz-programacao-hazel.vercel.app" target="_blank">Clique aqui para acessar</a></p>

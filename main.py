@@ -1,6 +1,24 @@
+import os
+from dotenv import load_dotenv
 from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
+
+load_dotenv()
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+db = SQLAlchemy()
+db.init_app(app)
+
+class Usuario(db.Model):
+    __tablename__ = 'usuarios'
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    feedback = db.Column(db.Text, nullable=True)
+
+with app.app_context():
+    db.create_all()
 
 simbolos = "!@#$%^&*()-_=+[{]};:'\",<.>/?|\\"
 
@@ -11,6 +29,11 @@ def home():
 @app.route('/enviar', methods=["POST"])
 
 def processarQuiz():
+
+    name = request.form.get("name")
+    email = request.form.get("email")
+    comments = request.form.get("comments")
+
     respostaP1 = request.form.get("pergunta1")
     respostaP2 = request.form.get("pergunta2")
     respostaP3 = request.form.get("pergunta3")
@@ -63,6 +86,11 @@ def processarQuiz():
 
     if respostaP8 == "java" or respostaP8 == "Java":
         pontos = pontos + 1
+
+    if email:
+        usuario = Usuario(nome=name, email=email, feedback=comments)
+        db.session.add(usuario)
+        db.session.commit()
 
     return render_template('enviar.html', pontos=pontos)
 
