@@ -1,8 +1,9 @@
 {
+  "version": 2,
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/main"
+      "destination": "/main.py"
     }
   ]
 }
